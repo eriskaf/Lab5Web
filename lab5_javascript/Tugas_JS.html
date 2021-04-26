@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Form</title>
+    <script lang="javascript">
+        function validasi() {
+		var nama = document.getElementById("nama").value;
+		var email = document.getElementById("email").value;
+		var alamat = document.getElementById("alamat").value;
+		if (nama != "" && email!="" && alamat !="") {
+			return true;
+		}else{
+			alert('Data Anda Tidak Lengkap !');
+		}
+	}
+    </script>
+</head>
+<body>
+    <fieldset>
+    <form action="#" method="POST" onSubmit="validasi()">
+        <p>
+            <label>Nama Lengkap:</label>
+            <input type="text" name="nama" id="nama" />
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" name="email" id="email" />
+        </p>
+        <p>
+            <label>Alamat:</label>
+            <textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Daftar" class="tombol">
+        </p>
+    </form>
+    </fieldset>
+
+    <style> form p > label { 
+        display: inline-block; 
+        width: 100px; 
+        } 
+        form input[type="text"], form email { 
+            border: 1px solid #197a43; 
+        } 
+        form input[type="submit"] { 
+            border: 1px solid #197a43; 
+            background-color: #197a43; 
+            color: #ffffff; 
+            font-weight: bold; 
+            padding: 5px 15px; 
+        } 
+    </style>
+</body>
+</html>
